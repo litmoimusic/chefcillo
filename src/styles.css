@@ -1,1 +1,154 @@
 /* You can add global styles to this file, and also import other style files */
+
+.fondoChef {
+    background-image: url("assets/images/fondo.png");
+}
+
+.foto1 {
+    background-size: 100% auto;
+    background-image: url("assets/images/small/small-1.jpg");
+}
+
+.tabbable .nav-tabs {
+    overflow-x: auto;
+    overflow-y: hidden;
+    flex-wrap: nowrap;
+}
+
+.cafe {
+    color: #98380C !important;
+}
+
+.bgCafe {
+    background-color: #98380C;
+}
+
+.fzt {
+    font-size: 40px;
+}
+
+.menos {
+    margin-top: -35px;
+}
+
+.sombra {
+    -webkit-box-shadow: 10px 10px 5px -8px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 10px 10px 5px -8px rgba(0, 0, 0, 0.4);
+    box-shadow: 10px 10px 5px -8px rgba(0, 0, 0, 0.4);
+}
+
+
+/* You can add global styles to this file, and also import other style files */
+
+.bg1 {
+    background: #ffc525;
+}
+
+.bgJumbo {
+    background-color: #ffc525;
+}
+
+.bg7 {
+    background: #000000;
+}
+
+.text1 {
+    color: #ffc525;
+}
+
+.bg2 {
+    background: #F4DC64;
+}
+
+.text2 {
+    color: #233d4d;
+}
+
+.bg3 {
+    background: #ffffff;
+}
+
+.text3 {
+    color: #fe7f2d;
+}
+
+.bg4 {
+    background: #a1c181;
+}
+
+.text4 {
+    color: #a1c181;
+}
+
+.bg5 {
+    background: #619b8a;
+}
+
+.text5 {
+    color: #619b8a;
+}
+
+body {
+    background-color: black;
+}
+
+hr {
+    border-color: white;
+}
+
+.puntero {
+    cursor: pointer;
+}
+
+.img-circle {
+    border-radius: 100%;
+    width: 150px;
+}
+
+.card-title,
+.card-text {
+    color: black;
+}
+
+.badge {
+    margin-left: 5px;
+}
+
+.btn-outline-success {
+    margin-left: 5px;
+}
+
+.img-thumb {
+    width: 50px;
+    height: 50px;
+}
+
+
+/* Animaciones */
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.fast {
+    -webkit-animation-duration: 0.4s;
+    animation-duration: 0.4s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+}
