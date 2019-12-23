@@ -525,6 +525,7 @@ mark,
 .img-fluid {
     max-width: 100%;
     height: auto;
+    padding: 0;
 }
 
 .img-thumbnail {
@@ -2757,15 +2758,15 @@ fieldset:disabled a.btn {
 }
 
 .btn-primary {
-    color: #fff;
-    background-color: #3688fc;
-    border-color: #3688fc;
+    color: rgb(14, 14, 14);
+    background-color: #fcce36;
+    border-color: #fcce36;
 }
 
 .btn-primary:hover {
     color: #fff;
-    background-color: #1072fb;
-    border-color: #046afb;
+    background-color: #fbd810;
+    border-color: #fbd810;
 }
 
 .btn-primary:focus,
@@ -7100,18 +7101,6 @@ a.close.disabled {
 
 .carousel-indicators .active {
     opacity: 1;
-}
-
-.carousel-caption {
-    position: absolute;
-    right: 15%;
-    bottom: 20px;
-    left: 15%;
-    z-index: 10;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    color: #fff;
-    text-align: center;
 }
 
 @-webkit-keyframes spinner-border {
@@ -12734,8 +12723,8 @@ body[data-layout="topnav"] .container-fluid {
 }
 
 .card-pricing-recommended .card-pricing-plan-tag {
-    background-color: rgba(250, 103, 103, 0.2);
-    color: #fa6767;
+    background-color: rgb(245, 188, 30);
+    color: #000000;
     padding: 5px 0;
     font-weight: 700;
     border-radius: .25rem .25rem 0 0;

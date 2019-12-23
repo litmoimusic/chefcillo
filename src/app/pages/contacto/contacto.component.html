@@ -6,7 +6,7 @@
             <div class="col-md-5">
 
                 <div class="text-md-right mt-5 mt-md-0">
-                    <img src="assets/images/chef.svg" class="img-fluid" />
+                    <img src="assets/images/chef2.png" class="img-fluid" />
                 </div>
 
 
@@ -35,7 +35,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="text-center">
-                    <h3 class="text1">Escribenos</h3>
+                    <h3 class="text1">Escríbenos</h3>
                     <p class="text1 mt-2">Nos encantaría que pruebes nuestros productos y servicios
                     </p>
                 </div>
@@ -51,18 +51,18 @@
             </div>
 
             <div class="col-md-8">
-                <form>
+                <form [formGroup]='comentario' (ngSubmit)="enviarComentario(comentario)">
                     <div class="row mt-4">
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label class="text1" for="fullname">Tu nombre</label>
-                                <input class="form-control form-control-light" type="text" id="fullname" placeholder="Ingresa tu nombre...">
+                                <input formControlName="nombre" class="form-control form-control-light" type="text" id="fullname" placeholder="Ingresa tu nombre...">
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label class="text1" for="emailaddress">Tu correo</label>
-                                <input class="form-control form-control-light" type="email" required="" id="emailaddress" placeholder="ingresa tu email...">
+                                <input formControlName="correo" class="form-control form-control-light" type="email" required="" id="emailaddress" placeholder="ingresa tu email...">
                             </div>
                         </div>
                     </div>
@@ -71,7 +71,7 @@
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <label class="text1" for="subject">Titulo</label>
-                                <input class="form-control form-control-light" type="text" id="subject" placeholder="Ingresa un titulo...">
+                                <input formControlName="titulo" class="form-control form-control-light" type="text" id="subject" placeholder="Ingresa un titulo...">
                             </div>
                         </div>
                     </div>
@@ -80,15 +80,20 @@
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <label class="text1" for="comments">Mensaje</label>
-                                <textarea id="comments" rows="4" class="form-control form-control-light" placeholder="Ingresa tu mensaje aqui..."></textarea>
+                                <textarea formControlName="mensaje" rows="4" class="form-control form-control-light" placeholder="Ingresa tu mensaje aqui..."></textarea>
                             </div>
                         </div>
                     </div>
 
+                    <div class="form-group form-check">
+                        <input type="checkbox" formControlName="politica" value="si" class="form-check-input">
+                        <label class="form-check-label text1" for="exampleCheck1">Acepto la<a routerLink="/terminos"> Política de Protección de datos personales. </a>  </label>
+                    </div>
+
                     <div class="row mt-2">
                         <div class="col-12 text-right">
-                            <button class="btn btn-primary">Enviar mensaje <i
-                                            class="mdi mdi-telegram ml-1"></i> </button>
+                            <button type="submit" class="btn btn-outline-warning">Enviar mensaje <i
+                                        class="mdi mdi-telegram ml-1"></i> </button>
                         </div>
                     </div>
                 </form>

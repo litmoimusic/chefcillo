@@ -1,7 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
 
+.circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    font-size: 12px;
+    color: #fff;
+    line-height: 500px;
+    text-align: center;
+    background: #000
+}
+
+.parrafo {
+    font-size: 16px;
+}
+
 .fondoChef {
     background-image: url("assets/images/fondo.png");
+}
+
+.fondoChef2 {
+    background-image: url("assets/images/fondo2.png");
 }
 
 .foto1 {
@@ -15,12 +34,20 @@
     flex-wrap: nowrap;
 }
 
+.white {
+    background: rgb(255, 255, 255);
+}
+
 .cafe {
     color: #98380C !important;
 }
 
 .bgCafe {
     background-color: #98380C;
+}
+
+.bgAmarillo {
+    background-color: rgb(221, 213, 142) !important;
 }
 
 .fzt {
@@ -102,7 +129,7 @@ hr {
 
 .img-circle {
     border-radius: 100%;
-    width: 150px;
+    width: 350px;
 }
 
 .card-title,
@@ -151,4 +178,12 @@ hr {
 
 .fadeIn {
     animation-name: fadeIn;
+}
+
+@media (max-width: 500px) {
+    .margin0 {
+        position: relative;
+        bottom: 0;
+        margin-bottom: 0;
+    }
 }

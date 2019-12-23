@@ -8,6 +8,7 @@ import { CanalesComponent } from './pages/canales/canales.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { PedidoComponent } from './pages/pedido/pedido.component';
 import { HistoriaComponent } from './pages/historia/historia.component';
+import { TerminosComponent } from './pages/terminos/terminos.component';
 
 
 
@@ -22,6 +23,7 @@ const appRoutes: Routes = [
     { path: 'canales', component: CanalesComponent },
     { path: 'contacto', component: ContactoComponent },
     { path: 'pedido', component: PedidoComponent  },
+    { path: 'terminos', component: TerminosComponent },
     { path: '**', component: NopagefoundComponent },
 ];
 

@@ -15,6 +15,9 @@ import { ContactoComponent } from './pages/contacto/contacto.component';
 import { PedidoComponent } from './pages/pedido/pedido.component';
 import { HistoriaComponent } from './pages/historia/historia.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { TerminosComponent } from './pages/terminos/terminos.component';
+import { FormsModule , ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -28,11 +31,15 @@ import { NavbarComponent } from './navbar/navbar.component';
     ContactoComponent,
     PedidoComponent,
     HistoriaComponent,
-    NavbarComponent
+    NavbarComponent,
+    TerminosComponent
   ],
   imports: [
     BrowserModule,
     APP_ROUTES,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -6,7 +6,7 @@
             <div class="col-md-5">
 
                 <div class="text-md-right mt-5 mt-md-0">
-                    <img src="assets/images/chef.svg" class="img-fluid" />
+                    <img src="assets/images/chef2.png" class="img-fluid" />
                 </div>
 
 
@@ -17,12 +17,12 @@
                     <div>
                         <span class=" cafe ml-1">EL CHEFCILLO retribuye al universo: RSE</span>
                     </div>
-                    <h2 class="font-weight-normal fzt cafe mb-4 mt-3 hero-title">
+                    <h4 class="cafe mb-4 mt-3">
                         Desde su nacimiento EL CHEFCILLO realiza jornadas quincenales de donación de pan a habitantes de la calle en el centro de Bogotá.
-                    </h2>
+                    </h4>
 
-                    <p>Sintiendo la inmensa gratitud de ellos en el momento de recibir uno de nuestros panes sabemos que en algo estamos contribuyendo a disminución del tiempo que pueden estar expuestos a sustancias que alteren su conciencia, y de esta
-                        manera generar un impacto positivo de largo plazo que pueda tener etapas posteriores.
+                    <p>Sintiendo la inmensa gratitud de ellos al recibir uno de nuestros panes sabemos que en algo estamos contribuyendo a la disminución del consumo de sustancias que alteren su conciencia, y de esta manera generar un impacto positivo de
+                        largo plazo que pueda tener etapas posteriores.
                     </p>
 
                 </div>
@@ -48,27 +48,63 @@
         <div class="row align-items-center mt-3 text-center">
 
             <div class="col-md-12">
-                <form>
+                <form [formGroup]='jornada' (ngSubmit)="enviarAporte(jornada)">
                     <div class="row mt-4">
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label class="text1" for="fullname">Tu nombre</label>
-                                <input class="form-control form-control-light" type="text" id="fullname" placeholder="Ingresa tu nombre...">
+                                <input formControlName="nombre" class="form-control form-control-light" type="text" id="fullname" placeholder="Ingresa tu nombre...">
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label class="text1" for="emailaddress">Tu correo</label>
-                                <input class="form-control form-control-light" type="email" required="" id="emailaddress" placeholder="ingresa tu email...">
+                                <input formControlName="correo" class="form-control form-control-light" type="email" required="" id="emailaddress" placeholder="ingresa tu email...">
                             </div>
                         </div>
                     </div>
 
-                    <!--  Cómo aportarias ---- check item Tiempo - Dinero - Producto  -->
+                    <div class="row">
 
-                    <div class="row mt-2">
-                        <div class="col-12 text-right">
-                            <button class="btn btn-primary">Enviar Solicitud <i
+                        <div class="col-6">
+
+                            <label class="text1" for="fullname">¿Cómo quieres aportar?</label>
+
+                        </div>
+
+                        <div class="col-6 ">
+
+                            <div class="form-check text-left ">
+                                <input formControlName="aporte" value="tiempo" class="form-check-input" type="radio" id="inlineRadio1">
+                                <label class="form-check-label text1" for="inlineRadio1">Tiempo</label>
+                            </div>
+                            <div class="form-check text-left">
+                                <input formControlName="aporte" value="dinero" class="form-check-input" type="radio" id="inlineRadio2">
+                                <label class="form-check-label text1" for="inlineRadio2">Dinero</label>
+                            </div>
+                            <div class="form-check text-left">
+                                <input formControlName="aporte" value="producto" class="form-check-input" type="radio" id="inlineRadio2">
+                                <label class="form-check-label text1" for="inlineRadio2">Producto</label>
+                            </div>
+
+
+                        </div>
+
+
+
+
+
+                    </div>
+
+
+                    <div class="form-group form-check mt-4">
+                        <input formControlName="politica" value="si" type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label text1" for="exampleCheck1">Acepto la<a routerLink="/terminos"> Política de Protección de datos personales. </a>  </label>
+                    </div>
+
+                    <div class="row mt-4">
+                        <div class="col-12 text-center">
+                            <button class="btn btn-outline-warning">Enviar Solicitud <i
                                                 class="mdi mdi-telegram ml-1"></i> </button>
                         </div>
                     </div>
